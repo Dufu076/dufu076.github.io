@@ -256,103 +256,13 @@
 
     .hero {
       margin-top: 0;
-      padding: 22px 20px 18px;
       border-radius: 0 0 18px 18px;
-      background:
-        radial-gradient(circle at 78% 20%, rgba(255, 255, 255, 0.42) 0, rgba(255, 255, 255, 0) 20%),
-        linear-gradient(135deg, #98c3ff 0%, #d9ebff 100%);
-      position: relative;
       overflow: hidden;
     }
 
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-    }
-
-    .hero::before {
-      width: 320px;
-      height: 320px;
-      right: -140px;
-      top: -120px;
-    }
-
-    .hero::after {
-      width: 220px;
-      height: 220px;
-      left: 160px;
-      top: -90px;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      font-size: 38px;
-      font-weight: 900;
-      color: #1558b5;
-      letter-spacing: 0.03em;
-      margin-bottom: 18px;
-    }
-
-    .hero-meta {
-      color: #2d5d91;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .hero-meta small {
+    .hero-image {
+      width: 100%;
       display: block;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-    }
-
-    .hero-badge {
-      width: 146px;
-      position: relative;
-      flex: 0 0 auto;
-    }
-
-    .stamp {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 92px;
-      height: 92px;
-      border-radius: 50%;
-      border: 4px solid #2779cb;
-      display: grid;
-      place-items: center;
-      color: #2779cb;
-      background: rgba(255, 255, 255, 0.35);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .slab {
-      position: absolute;
-      right: 10px;
-      top: 32px;
-      width: 98px;
-      height: 118px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55));
-      transform: rotate(16deg);
-      color: #2779cb;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      font-weight: 800;
-      line-height: 1.3;
-      box-shadow: 0 10px 24px rgba(39, 121, 203, 0.12);
     }
 
     .card {
@@ -432,17 +342,6 @@
     .vin-code strong {
       color: #435165;
       margin-right: 6px;
-    }
-
-    .photo-btn {
-      background: #1f71d8;
-      color: #fff;
-      border: 0;
-      border-radius: 8px;
-      padding: 11px 18px;
-      font-size: 14px;
-      font-weight: 700;
-      flex: 0 0 auto;
     }
 
     .brand-line {
@@ -847,10 +746,6 @@
         font-size: 18px;
       }
 
-      .brand {
-        font-size: 30px;
-      }
-
       .section-title,
       .buyback h2,
       .commission-title {
@@ -869,18 +764,6 @@
       <div class="field">
         <label for="edit-page-title">页面标题</label>
         <input id="edit-page-title" type="text" data-edit-input="page-title">
-      </div>
-      <div class="field">
-        <label for="edit-brand">品牌标题</label>
-        <input id="edit-brand" type="text" data-edit-input="brand">
-      </div>
-      <div class="field">
-        <label for="edit-phone">预约电话</label>
-        <input id="edit-phone" type="text" data-edit-input="hero-phone">
-      </div>
-      <div class="field">
-        <label for="edit-report-id">报告编号</label>
-        <input id="edit-report-id" type="text" data-edit-input="report-id">
       </div>
       <div class="field">
         <label for="edit-vin">VIN</label>
@@ -991,19 +874,7 @@
       </div>
 
       <div class="hero">
-        <div class="hero-grid">
-          <div>
-            <div class="brand" data-edit-key="brand">维真验车</div>
-            <div class="hero-meta">
-              <div data-edit-key="hero-phone">预约验车电话:400 997 0017</div>
-              <small data-edit-key="report-id">报告编号：NWZRHRYJB7ZPEJGK68A5F</small>
-            </div>
-          </div>
-          <div class="hero-badge" aria-hidden="true">
-            <div class="stamp">通</div>
-            <div class="slab">维真检测<br>真实车况</div>
-          </div>
-        </div>
+        <img class="hero-image" src="assets/hero-reference-2.jpg" alt="维真验车顶部横幅">
       </div>
 
       <div class="content">
@@ -1018,7 +889,6 @@
               <div class="vin-tag">车型信息请以实车为准</div>
               <div class="vin-code"><strong>VIN:</strong><span data-edit-key="vin-code">LGBH******366576</span></div>
             </div>
-            <button class="photo-btn">车辆图片</button>
           </div>
 
           <div class="brand-line" data-edit-key="car-name">日产轩逸</div>
